@@ -18,3 +18,97 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos de la lista de tareas */
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    background: #f0f0f0;
+}
+
+.task-item.completed .task-description {
+    text-decoration: line-through;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.task-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+.priority-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.priority-alta { 
+    background: #dc3545; 
+    color: white; 
+}
+
+.priority-media { 
+    background: #ffc107; 
+    color: #333; 
+}
+
+.priority-baja { 
+    background: #28a745; 
+    color: white; 
+}
+
+.task-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-complete {
+    background: #28a745;
+    color: white;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
