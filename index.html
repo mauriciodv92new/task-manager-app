@@ -10,7 +10,17 @@
     <div class="container">
         <h1>Gestor de Tareas - Equipo de Desarrollo</h1>
         <div id="app">
-            <!-- Contenido dinámico aquí -->
+            <div class="task-form">
+                <h2>Nueva Tarea</h2>
+                <input type="text" id="taskInput" placeholder="Descripción de la tarea">
+                <select id="prioritySelect">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <button id="addTaskBtn">Agregar Tarea</button>
+            </div>
+            <div id="taskList"></div>
         </div>
     </div>
     <script src="js/app.js"></script>
