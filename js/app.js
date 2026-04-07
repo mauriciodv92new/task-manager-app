@@ -100,3 +100,41 @@ function deleteTask(id) {
         renderTasks();
     }
 }
+
+// Inicialización de la aplicación
+document.addEventListener('DOMContentLoaded', function() {
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const taskInput = document.getElementById('taskInput');
+    const prioritySelect = document.getElementById('prioritySelect');
+    
+    // Renderizar tareas iniciales
+    renderTasks();
+    
+    // Evento para agregar tarea
+    addTaskBtn.addEventListener('click', function() {
+        const description = taskInput.value.trim();
+        const priority = prioritySelect.value;
+        
+        if (description === '') {
+            alert('Por favor ingrese una descripción para la tarea');
+            return;
+        }
+        
+        taskManager.addTask(description, priority);
+        renderTasks();
+        
+        // Limpiar formulario
+        taskInput.value = '';
+        prioritySelect.value = 'baja';
+        taskInput.focus();
+    });
+    
+    // Permitir agregar con Enter
+    taskInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            addTaskBtn.click();
+        }
+    });
+    
+    console.log('Aplicación completamente inicializada');
+});
